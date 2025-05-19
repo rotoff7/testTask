@@ -1,11 +1,9 @@
 package pages.modals;
 
-import enums.TextData;
 import io.qameta.allure.Step;
 import pages.BasePage;
 import pages.MainPage;
 
-import static enums.TextData.CARD_DESIGNER_OPTION;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 import static selectors.modals.DefaultModalSelectors.*;

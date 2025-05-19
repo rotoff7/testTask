@@ -11,6 +11,7 @@ import static selectors.components.ContactsComponentSelectors.contactsComponentT
 
 public class ContactsComponentPage extends BasePage {
 
+    //ACTIONS
     @Step("Открыть окно 'Связаться с нами'")
     public FeedBackFormPage openFeedBackForm(){
         btnContactUs.click();

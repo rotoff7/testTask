@@ -23,11 +23,6 @@ public class BasePage {
     // ↓↓↓ МЕТОДЫ ДЕЙСТВИЙ ↓↓↓ -->
 
     // КЛИКИ -->
-    @Step("Клик по элементу")
-    public void clickElement(SelenideElement element){
-        waitEnable(element);
-        element.click();
-    }
 
     @Step("Скорлл и клик по элементу")
     public void clickElementWithScroll(SelenideElement element){
@@ -35,18 +30,6 @@ public class BasePage {
                 .scrollTo()
                 .shouldBe(visible, Duration.ofSeconds(7))
                 .click();
-    }
-
-    @Step("Двойной клик по элементу")
-    public void doubleClickElement(SelenideElement element){
-        waitEnable(element);
-        element.doubleClick();
-    }
-
-    @Step("Двойной клик по элементу")
-    public void rightClickElement(SelenideElement element){
-        waitEnable(element);
-        element.contextClick();
     }
 
     @Step("Клик по элементу с удержанием")
@@ -85,7 +68,7 @@ public class BasePage {
         }
     }
 
-    //"Проверка, что элемент {0} виден в viewport"), Поскольку waitVisible всегда выдает true
+    //"Проверка, что элемент виден в viewport", Поскольку waitVisible всегда выдает true
     public boolean isElementInViewport(SelenideElement element, int timeoutSeconds) {
         long endTime = System.currentTimeMillis() + timeoutSeconds * 1000L;
         while (System.currentTimeMillis() < endTime) {

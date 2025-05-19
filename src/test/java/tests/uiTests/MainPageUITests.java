@@ -63,7 +63,7 @@ class MainPageUITests implements UITestsInit {
                 .inputFio("Маэль Дессандр") //FIXME Можно использовать генератор (написать метод в Utils)
                 .inputEmail("example1@mail.ru") //FIXME Можно использовать генератор (написать метод в Utils)
 
-                .verifyGetCodeBtnDisabled() // Проверка, что на этом моменте кнопка все еще неактвна
+                .verifyGetCodeBtnDisabled() // Проверка, что на этом моменте кнопка все еще неактивна
                 .inputNumber("+9324628412") //FIXME Можно использовать генератор (написать метод в Utils)
                 .verifyGetCodeBtnEnabled() // Проверка активации кнопки
                 .inputCode("095423")//FIXME Можно использовать генератор (написать метод в Utils)
@@ -72,7 +72,7 @@ class MainPageUITests implements UITestsInit {
                 .enablePersonalDataChb()
                 .enablePrivacyPolicy()
 
-                .verifyContactMeBtnDisabled() // Проверка, что на этом моменте кнопка все еще неактвна
+                .verifyContactMeBtnDisabled() // Проверка, что на этом моменте кнопка все еще неактивна
                 .enableUserAgreementChb()
                 .verifyContactMeBtnEnabled() // Проверка активации кнопки
 

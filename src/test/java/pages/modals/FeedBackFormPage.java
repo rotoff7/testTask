@@ -9,38 +9,39 @@ import static selectors.modals.FeedBackFormSelectors.*;
 
 public class FeedBackFormPage extends BasePage {
 
-    @Step("")
+    //ACTIONS
+    @Step("Заполнение ФИО")
     public FeedBackFormPage inputFio(String fio){
         fioField.sendKeys(fio);
         return this;
     }
-    @Step("")
+    @Step("Заполнение почты")
     public FeedBackFormPage inputEmail(String email){
         emailField.sendKeys(email);
         return this;
     }
-    @Step("")
+    @Step("Заполнение номера телефона")
     public FeedBackFormPage inputNumber(String number){
         phoneField.sendKeys(number);
         return this;
     }
-    @Step("")
+    @Step("Заполнение кода подтверждения")
     public FeedBackFormPage inputCode(String code){
         codeField.sendKeys(code);
         return this;
     }
 
-    @Step("")
+    @Step("Активация чек-бокса персональных данных")
     public FeedBackFormPage enablePersonalDataChb(){
         if(!chbPersonalData.isSelected()) chbPersonalData.click();
         return this;
     }
-    @Step("")
+    @Step("Активация чек-бокса политики конфиденциальности")
     public FeedBackFormPage enablePrivacyPolicy(){
         if(!chbPrivacyPolicy.isSelected()) chbPrivacyPolicy.click();
         return this;
     }
-    @Step("")
+    @Step("Активация чек-бокса пользовательского соглашения")
     public FeedBackFormPage enableUserAgreementChb(){
         if(!chbUserAgreement.isSelected()) chbUserAgreement.click();
         return this;
