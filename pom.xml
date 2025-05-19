@@ -41,6 +41,13 @@
             <artifactId>selenide</artifactId>
             <version>6.13.0</version>
         </dependency>
+
+        <dependency>
+            <groupId>io.qameta.allure</groupId>
+            <artifactId>allure-selenide</artifactId>
+            <version>2.24.0</version> <!-- Актуальная версия -->
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 </project>
