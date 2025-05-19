@@ -4,20 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a267cc70-f12b-4064-9b05-ace7fc509ca6" name="Changes" comment="initial commit">
-      <change afterPath="$PROJECT_DIR$/TaskText.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/configs/WebDriverBuilder.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/selectors/MainPageSelectors.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/selectors/components/ProductComponent.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/UITestsInit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/tests/uiTests/MainPageUITests.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/chromedriver.exe" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/resources/config.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+    <list default="true" id="a267cc70-f12b-4064-9b05-ace7fc509ca6" name="Changes" comment="architecture V1.0 complete">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Utils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/MainCategories.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/enums/TextData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selectors/components/ContactsComponentSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selectors/modals/DefaultModalSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/selectors/modals/FeedBackFormSelectors.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/components/ContactsComponentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/components/ProductComponentPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/modals/DefaultModalPage.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/pages/modals/FeedBackFormPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/selectors/MainPageSelectors.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selectors/pages/MainPageSelectors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/selectors/components/ProductComponent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/selectors/components/ProductComponentSelectors.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/BasePage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pages/MainPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/UITestsInit.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/UITestsInit.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/tests/uiTests/MainPageUITests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/tests/uiTests/MainPageUITests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,6 +32,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Enum" />
         <option value="Class" />
       </list>
     </option>
@@ -46,6 +52,7 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "main",
     "last_opened_file_path": "E:/QALearn/testTask/src/test/resources",
     "project.structure.last.edited": "Modules",
@@ -59,14 +66,30 @@
       <recent name="E:\QALearn\testTask\src\test\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="enums" />
       <recent name="pages" />
       <recent name="tests.uiTests" />
       <recent name="tests" />
       <recent name="selectors" />
-      <recent name="configs" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="JUnit.MainPageUITests.feedBackFormTest">
+    <configuration name="MainPageUITests.feedBackFormTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.uiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.uiTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.uiTests.MainPageUITests" />
+      <option name="METHOD_NAME" value="feedBackFormTest" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MainPageUITests.mainPageLoaded" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="testTask" />
       <extension name="coverage">
@@ -83,8 +106,26 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="MainPageUITests.smartLinkCardDesignerOption" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="testTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="tests.uiTests.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="tests.uiTests" />
+      <option name="MAIN_CLASS_NAME" value="tests.uiTests.MainPageUITests" />
+      <option name="METHOD_NAME" value="smartLinkCardDesignerOption" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.MainPageUITests.feedBackFormTest" />
+        <item itemvalue="JUnit.MainPageUITests.smartLinkCardDesignerOption" />
         <item itemvalue="JUnit.MainPageUITests.mainPageLoaded" />
       </list>
     </recent_temporary>
@@ -106,12 +147,21 @@
       <option name="project" value="LOCAL" />
       <updated>1747668317890</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="architecture V1.0 complete">
+      <option name="closed" value="true" />
+      <created>1747679223300</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1747679223300</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial commit" />
+    <MESSAGE value="architecture V1.0 complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="architecture V1.0 complete" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

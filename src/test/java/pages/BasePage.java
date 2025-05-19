@@ -2,6 +2,7 @@ package pages;
 
 
 import com.codeborne.selenide.ClickOptions;
+import com.codeborne.selenide.Selenide;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import org.openqa.selenium.interactions.Actions;
@@ -76,7 +77,31 @@ public class BasePage {
 
     @Step("Ожидание отображение элемента {0}")
     public boolean waitVisible(SelenideElement element, int seconds){
-        return element.shouldBe(visible, Duration.ofSeconds(seconds)).isDisplayed();
+        try {
+            element.shouldBe(visible, Duration.ofSeconds(seconds));
+            return true;
+        } catch (AssertionError e) {
+            return false;
+        }
+    }
+
+    //"Проверка, что элемент {0} виден в viewport"), Поскольку waitVisible всегда выдает true
+    public boolean isElementInViewport(SelenideElement element, int timeoutSeconds) {
+        long endTime = System.currentTimeMillis() + timeoutSeconds * 1000L;
+        while (System.currentTimeMillis() < endTime) {
+            if ((Boolean) Selenide.executeJavaScript(
+                    "const rect = arguments[0].getBoundingClientRect();" +
+                            "return (" +
+                            "    rect.top >= 0 &&" +
+                            "    rect.left >= 0 &&" +
+                            "    rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&" +
+                            "    rect.right <= (window.innerWidth || document.documentElement.clientWidth)" +
+                            ");", element)) {
+                return true;
+            }
+            sleep(250); // Пауза между проверками
+        }
+        return false;
     }
 
     @Step("Ожидание скрытия элемента {0}")
